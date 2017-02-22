@@ -1,0 +1,25 @@
+<h1>Point 1:</h1>
+<%= form_tag point1_results_path, :method =>'post' do %>
+      <%= text_field_tag :start_date,"start_date",:class=>'datepicker' %>
+      <%= text_field_tag :end_date,"end_date",:class=>'datepicker'%>
+      <%= submit_tag "Submit"%>
+<% end %>
+
+<h1>Point 2:</h1>
+<%= form_tag point2_results_path, :method =>'post' do %>
+      <%= number_field_tag :repeat_number, "number for repeated users"%>
+      <%= submit_tag "Submit"%>
+<% end %>
+
+<h1>Point 3:</h1>
+<%= form_tag point3_results_path, :method =>'post' do %>
+      <%= text_field_tag :start_date,"start_date",:class=>'datepicker' %>
+      <%= text_field_tag :end_date,"end_date",:class=>'datepicker'%>
+      <%= submit_tag "Submit"%>
+<% end %>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('.datepicker').datepicker();
+  });
+</script>

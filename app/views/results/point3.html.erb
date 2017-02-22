@@ -1,0 +1,10 @@
+<h2>Users who visits post each month</h2>
+<%=@user_every_month.count%>
+
+<h2>Times they visited post each month(AVG)</h2>
+<%@view_each_month.each do |key, value|%>
+	<p><%=key%>   ----   <%=(value.to_f/@user_every_month.count).round(3)%></p>
+<%end%>
+
+<h2>Number of Likes garnered by users</h2>
+<%=@no_of_likes%> by <%=(@no_of_likes.to_f/@user_every_month.count).round(3)*100%>%
